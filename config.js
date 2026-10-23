@@ -3,5 +3,5 @@
 // NEVER paste the service_role key here.
 window.CFG = {
   URL: "https://odghewcpwszupkrddtoh.supabase.co",
-  KEY: "odghewcpwszupkrddtohgit"
+  KEY: "odghewcpwszupkrddtoh"
 };
