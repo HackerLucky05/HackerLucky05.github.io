@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:; media-src https:; connect-src https://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Cybersecurity Portfolio</title>
+<meta name="description" content="Cybersecurity projects, write-ups and research.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<canvas id="rain" aria-hidden="true"></canvas>
+<header class="top">
+  <a class="brand" href="#top" id="brand">root@portfolio</a>
+  <nav><a href="#about">about</a><a href="#projects">projects</a><a href="#contact">contact</a><button id="theme" type="button"></button></nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="term">
+      <div class="bar"><i></i><i></i><i></i><span>~/home</span></div>
+      <div class="body">
+        <p class="cmd">whoami</p>
+        <h1 id="name"></h1>
+        <p class="cmd">cat role.txt</p>
+        <p class="tag"><span id="tag" class="typing"></span></p>
+        <a class="btn" href="#projects">./view-projects</a><a class="btn ghost" href="#contact">./contact-me</a>
+      </div>
+    </div>
+    <ul class="stats" id="stats"></ul>
+  </section>
+
+  <section id="about" class="wrap">
+    <h2>about</h2>
+    <div class="about">
+      <div id="photo"></div>
+      <div>
+        <p id="bio" class="bio"></p>
+        <ul id="skills" class="chips"></ul>
+        <p id="links" class="links"></p>
+      </div>
+    </div>
+    <div id="extra"></div>
+  </section>
+
+  <section id="projects" class="wrap">
+    <h2>ls ./projects</h2>
+    <div id="grid" class="grid"><p class="muted">Loading…</p></div>
+  </section>
+
+  <section id="contact" class="wrap">
+    <h2>./contact-me</h2>
+    <form id="cf" class="form">
+      <input name="name" required maxlength="100" placeholder="> your name" autocomplete="name">
+      <input name="email" type="email" required maxlength="200" placeholder="> your email" autocomplete="email">
+      <textarea name="message" required maxlength="2000" rows="6" placeholder="> message"></textarea>
+      <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn">send message</button>
+      <p id="cmsg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> · <span id="demo"></span><a href="admin.html">admin</a></footer>
+
+<dialog id="dlg"><button id="close" class="close" aria-label="Close">[ close ]</button><div id="dbody"></div></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
