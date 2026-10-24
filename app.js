@@ -77,7 +77,7 @@ async function init() {
   if (me.photo_url) $("#photo").innerHTML = `<img src="${url(me.photo_url)}" alt="${esc(me.name)}">`;
   $("#extra").innerHTML = secs.map((s) => `<section><h3>${esc(s.title)}</h3><div class="doc">${md(s.content)}</div></section>`).join("");
   $("#grid").innerHTML = projects.map((x, i) => `<button class="card" data-i="${i}"><div class="bar"><i></i><i></i><i></i><span>~/projects/${esc(x.slug)}</span></div>${x.cover_image ? `<img src="${url(x.cover_image)}" alt="">` : ""}<div class="in"><small>[${esc(x.category)}]</small><h3>${esc(x.title)}</h3><p>${esc(x.description)}</p></div></button>`).join("");
-  if (demo) $("#demo").innerHTML = `Sample content shown. Add your own in the admin panel. · `;
+  if (demo) $("#demo").innerHTML = `All Rigth Reserved | Hacker Lucky · `;
 }
 
 $("#grid").addEventListener("click", async (e) => {
